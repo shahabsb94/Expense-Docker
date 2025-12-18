@@ -13,7 +13,7 @@ services:
 
   backend:
     image: backend:1.0.0
-    command: sh -c "sleep 5 && node"
+    command: sh -c "sleep 10 && node"
     networks:
       - expense
     container_name: backend
