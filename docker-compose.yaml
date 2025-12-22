@@ -4,7 +4,7 @@ volumes:
   mysql:
 services:
   mysql:
-    image: mysql:1.0.0
+    image: shahabsb/expense-mysql:1.0.0
     networks:
       - expense
     container_name: mysql
@@ -12,7 +12,7 @@ services:
       - mysql:/var/lib/mysql
 
   backend:
-    image: backend:1.0.0
+    image: shahabsb/expense-backend:1.0.0
     command: sh -c "sleep 5 && node /opt/backend/index.js"
     networks:
       - expense
@@ -21,7 +21,7 @@ services:
       - mysql
 
   frontend:
-    image: frontend:1.0.0
+    image: shahabsb/expense-frontend:1.0.0
     networks:
       - expense
     container_name: frontend
