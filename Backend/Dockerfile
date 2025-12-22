@@ -8,7 +8,7 @@ RUN mkdir /opt/backend
 RUN chown -R expense:expense /opt/backend
 WORKDIR /opt/backend
 COPY package.json .
-COPY *.js .
+COPY *.js ./
 RUN npm install
 ENV DB_HOST="mysql"
 USER expense
